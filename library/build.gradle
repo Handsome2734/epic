@@ -20,12 +20,13 @@ android {
         externalNativeBuild {
             cmake {
                 cppFlags "-std=c++11"
-                arguments "-DANDROID_TOOLCHAIN=gcc"
+//                arguments "-DANDROID_TOOLCHAIN=gcc"
             }
         }
     }
     buildTypes {
         release {
+            debuggable true
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
